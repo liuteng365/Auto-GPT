@@ -161,8 +161,11 @@ def get_prompt() -> str:
         " the least number of steps."
     )
 
+    prompt_str = prompt_generator.generate_prompt_string()
+    print(f"提示词： {prompt_str}")
+
     # Generate the prompt string
-    return prompt_generator.generate_prompt_string()
+    return prompt_str
 
 
 def construct_prompt() -> str:
