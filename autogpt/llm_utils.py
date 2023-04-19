@@ -134,7 +134,7 @@ def create_chat_completion(
             raise RuntimeError(f"Failed to get response after {num_retries} retries")
         else:
             quit(1)
-
+    print(f"接口调用：model: {model}, messages: {messages.__str__()}, response: {response.choices[0].message['content']}")
     return response.choices[0].message["content"]
 
 
